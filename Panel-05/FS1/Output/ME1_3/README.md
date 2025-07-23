@@ -13,6 +13,5 @@ This directory contains all the files generated during model evaluation using a 
 - **Model 03 – Combined Clinical + Promoter**  
   Utilizes all 4 features (both clinical and promoter) together.
 
-Each model's evaluation includes performance metrics, probability outputs, and comparative metrics such as **Net Reclassification Improvement (NRI)**.
 
 """
