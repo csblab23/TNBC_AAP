@@ -1,4 +1,9 @@
-#### The following section contain all the output files generated ---> while comparing 3 models (using 4 feature set) i.e., 
-#### clinical only v/s promoters only &&
-#### clinical only v/s all features &&
-#### promoters only v/s all features 
+# 🔄 Model Comparison Outputs
+
+This section contains all output files generated during **model comparison** using a 4-feature set. Three pairwise model comparisons were performed to evaluate the added value of different feature groups using metrics such as **Net Reclassification Improvement (NRI)**.
+
+## 🔁 Model Comparisons
+
+- **Clinical Only vs. Promoter Only**
+- **Clinical Only vs. All Features (Clinical + Promoter)**
+- **Promoter Only vs. All Features (Clinical + Promoter)**
