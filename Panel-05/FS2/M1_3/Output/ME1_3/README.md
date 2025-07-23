@@ -1,5 +1,4 @@
 
-readme_content = """
 # 🔍 Model Evaluation Outputs
 
 This directory contains all the files generated during model evaluation using a feature set of **14 selected features**. The evaluations are performed across three different models to assess the predictive power of clinical, promoter, and combined features.
