@@ -4,7 +4,7 @@ This repository contains scripts and data used to construct predictive models fo
 
 ## 📁 Structure and Key Components
 
-- **FS/** – Directory containing all model construction scripts organized by individual feature sets (FS = Feature Set).
+- **Panel05/FS/** – Directory containing all model construction scripts organized by individual feature sets (FS = Feature Set).
 - **Input.csv** – Unified input dataset used across all models for training and evaluation.
 
 Each feature set is evaluated independently to assess its contribution to relapse prediction. Models may be constructed using:
