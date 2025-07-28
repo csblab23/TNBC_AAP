@@ -1,4 +1,4 @@
-## Code for Figure 5 a,b,c -->>To construct risk groups and to check the survival of each risk group in Training dataset for: Clinical only; Promoter only & All features ##
+## Code for Figure 5 a,b,c -->> To construct risk groups and to check the survival of each risk group in Training set for: Clinical only; Promoter only & All features ##
 
 # Load required packages
 library(survival)
