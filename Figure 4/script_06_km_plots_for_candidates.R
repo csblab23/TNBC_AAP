@@ -1,4 +1,4 @@
-## Code to make the KM PLOTS of Figure 4a-f and Supplementary S3a ##
+## Code to make the KM PLOTS of Figure 4a-f ##
 
 # Load required packages
 library(survival)
@@ -213,56 +213,6 @@ test
 ggsave("20_12_pr_41490_FTX.png", test$plot, width = 7, height = 6, dpi = 1200,bg = "white")
 
 ##############################################################################################################
-
-# For pr41491_FTX
-grep('ENSG00000230590.13', colnames(mm_finaldf))
-colnames(mm_finaldf)[123]
-sfit <- survfit(Surv(mm_finaldf$RFS_time_Days, mm_finaldf$RFS_Status)~ mm_finaldf[,123], data=mm_finaldf)
-test <- ggsurvplot(
-  sfit,
-  pval = TRUE,
-  pval.method = TRUE,
-  size = 1.5,
-  palette = c("darkorchid3", "#298c8c"),
-  title = "pr41491_FTX",
-  xlab = "Time (Days)",
-  ylab = "Relapse Free Survival",
-  legend.labs = c("High (n = 220)", "Low (n = 138)"),
-  legend.title = "Risk Groups",
-  legend = c(0.75, 0.25),  # Adjust legend position inside the plot area
-  risk.table = TRUE,
-  risk.table.height = 0.2,
-  surv.median.line = "hv",
-  risk.table.fontsize = 6,
-  fontsize = 16,
-  pval.size = 11,
-  font.main = 30,
-  font.tickslab = 20,
-  color.tickslab = 'black',
-  size = 1,
-  tables.y.text = FALSE,
-  font.legend = 22,
-  ggtheme = theme_minimal() +
-    theme(
-      plot.title = element_text(size = 18, face = 'bold', family = 'Arial', hjust = 0.5),
-      axis.title.x = element_text(size = 18, face = 'bold', colour = 'black'),
-      axis.title.y = element_text(size = 18, face = 'bold', colour = 'black'),
-      axis.text.x = element_text(colour = 'black'),
-      axis.text.y = element_text(colour = 'black'),
-      legend.text = element_text(size = 20, face = 'bold'),
-      legend.title = element_text(size = 25, face = 'bold'),
-      legend.position = c(0.75, 0.25),  # Position legend inside the plot
-      axis.line = element_line(colour = "black"),
-      panel.grid.major = element_line(colour = "grey90"),
-      panel.grid.minor = element_line(colour = "grey90"),
-      panel.border = element_rect(color = "black", size = 1, fill = NA),
-      panel.background = element_blank()
-    )
-)
-test
-ggsave("20_12_pr_41491_FTX.png", test$plot, width = 7, height = 6, dpi = 1200,bg = "white")
-
-##################################################################################################
 
 # For pr41492_FTX
 grep('ENSG00000230590.13', colnames(mm_finaldf))
