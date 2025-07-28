@@ -474,7 +474,7 @@ ggsave("HDAC9_expression_boxplot_pr1077.png", plot = g1, width = 8, height = 6, 
 
 # Box plots for the HDAC9 pr1077 & pr1079 transcript expression in TCGA
 # Read TCGA metadata:
-tcga_metadata <- read_csv("C:/Users/Simran/Desktop/BRCA/tcga_data_new/MEGENA/Megena_on_TCGA/all_csv_files/Tum_plus_nor_nodupl_survivalinfo.csv")
+tcga_metadata <- read_csv("Tum_plus_nor_nodupl_survivalinfo.csv")
 tcga_metadata <- tcga_metadata[,-1]
 tcga_metadata <- as.data.frame(tcga_metadata)
 
@@ -483,7 +483,6 @@ keep <- c("YES","Normal")
 tcga_metadata <- tcga_metadata[tcga_metadata$TNBC %in% keep,]
 
 ## Read HDAC9 pr1079 transcripts FPKM (log2 fpkm + 0.001)
-# https://xenabrowser.net/datapages/?dataset=tcga_RSEM_isoform_fpkm&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443
 t1 <- read_tsv("ENST00000456174.6_xenaDownload.tsv")
 t1 <- as.data.frame(t1)
 t1_sel <- t1[t1$sample%in%tcga_metadata$trimmed_sample_submitter_id,]
