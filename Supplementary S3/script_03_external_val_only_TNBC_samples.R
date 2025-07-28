@@ -1,4 +1,4 @@
-## Code to make Supplementary S3b,c,d,e ## 
+## Code to make Supplementary S3d,e,f,g ## 
 # This includes PROGNOSTIC RESULTS VALIDATION in GSE240671 cohort --->> only TNBC samples taken and proActiv ran using condition = NULL
 
 # Load required libraries
