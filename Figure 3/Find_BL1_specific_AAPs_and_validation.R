@@ -7,6 +7,13 @@
 
 ####---------------------------------------------------------------------------------####
 
+# Load required libraries
+library(readxl)
+library(qtl2)
+library(dplyr)
+library(tidyverse)
+library(data.table)
+
 # Find BL1-specific AAPs in FUSCC dataset:---->>
 
 # DEG between BL1 vs REST 
