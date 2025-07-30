@@ -226,7 +226,7 @@ for (gene in names(promoters_list)) {
                        size = 12, label = "p.signif",
                        label.y = 8.6, 
                        label.x.npc = "middle") +
-    scale_y_continuous(limits = c(4, 9), expand = c(0, 0))
+    scale_y_continuous(limits = c(4, 9), expand = c(0, 0))   # Set according to the values
   
   # Print and save
   print(g)
@@ -287,7 +287,7 @@ for (gene_name in names(gene_list)) {
                        label.y = 9.5,
                        label.x.npc = "middle") +
     stat_n_text(size = 8, color = "black", fontface = "bold") +
-    scale_y_continuous(limits = c(0, 10), expand = c(0, 0))
+    scale_y_continuous(limits = c(0, 10), expand = c(0, 0))   # Set according to the values
   
   # Print and save plot
   print(g)
@@ -390,7 +390,7 @@ for (gene_name in names(promoters_list)) {
                        label = "p.signif",
                        label.y = 9.3,
                        label.x.npc = "middle") +
-    scale_y_continuous(limits = c(0, 10), expand = c(0, 0))
+    scale_y_continuous(limits = c(0, 10), expand = c(0, 0))   # Set according to the values
   
   # Display and save
   print(g)
@@ -455,7 +455,7 @@ for (gene_name in names(gene_list)) {
                        label.y = 12.5,
                        label.x.npc = "middle") +
     stat_n_text(size = 8, color = "black", fontface = "bold") +
-    scale_y_continuous(limits = c(7, 13), expand = c(0, 0))
+    scale_y_continuous(limits = c(7, 13), expand = c(0, 0))    # Set according to the values
   
   # Print and save plot
   print(g)
