@@ -4,5 +4,5 @@ This repository contains scripts and data used to generate the PCA plots for sub
 
 **Key Components**
 
-1. Supplementary_S2.R: Code to generate all figures presented in Supplementary S2 of the paper.
+1. *Supplementary_S2.R*: Code to generate all figures presented in Supplementary S2 of the paper.
 
