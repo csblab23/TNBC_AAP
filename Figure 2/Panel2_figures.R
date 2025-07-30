@@ -618,8 +618,6 @@ tumor_metadata <- tumor_metadata[,c(1,2,3,85,87)]
 
 ## Read Overall Survival information:------------------------------>>
 survival <- read_csv("survival_info_fuscc.csv")
-colnames(survival) <- survival[1,]
-survival <- survival[-1,]
 survival <- survival[,c(1,43,45)]  # keeping: Project_ID   OS    OS_time_Months
 survival <- as.data.frame(survival)
 
@@ -787,7 +785,7 @@ for (pr in prom) {
     legend.title = "",
     palette = c("#008080", "#FFA500"),
     risk.table = TRUE,
-    xlim = c(0, 110),
+    xlim = c(0, 150),
     font.tickslab = 16,
     font.legend = 16,
     size = 1,
