@@ -581,10 +581,10 @@ filtered_df2_nonsig_g_sig_p <- filtered_df2_nonsig_g[filtered_df2_nonsig_g$promo
 ################################################################################################
 
 ## VALIDATE BASAL-specific AAPs:---->>
+fuscc <- nonsig_g_sig_p_filtered_df2
+val <- filtered_df2_nonsig_g_sig_p
 
 intersect(val$promoterId,fuscc$promoterId)
 intersect(val$geneId,fuscc$geneId)
-com <- fuscc[fuscc$promoterId%in%val$promoterId,]
-
 ################################################################################################
 ################################################################################################
