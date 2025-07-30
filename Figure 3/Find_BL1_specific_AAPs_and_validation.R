@@ -501,7 +501,7 @@ write.csv(filtered_df3,'final_BL1_AAPs_val.csv')
 #################################################################################
 #################################################################################
 
-# Intersect to find common AAPs:
+# Intersect to find common AAPs--------------------------->>
 
 # Load FUSCC BL1-specific AAPs
 fuscc_aap <- read_csv('final_BL1_AAPs_fuscc.csv')
@@ -513,7 +513,6 @@ val_aap <- val_aap[,-1]
 
 # Find common 
 intersect(fuscc_aap$promoterId,val_aap$promoterId)
-# 1002  1003  9366 10530 10533 10653 24831 25747 30507
 
 #################################################################################
 #################################################################################
