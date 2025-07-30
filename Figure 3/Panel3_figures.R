@@ -287,7 +287,7 @@ for (gene_name in names(gene_list)) {
                        label.y = 9.5,
                        label.x.npc = "middle") +
     stat_n_text(size = 8, color = "black", fontface = "bold") +
-    scale_y_continuous(limits = c(5.4, 10), expand = c(0, 0))
+    scale_y_continuous(limits = c(0, 10), expand = c(0, 0))
   
   # Print and save plot
   print(g)
