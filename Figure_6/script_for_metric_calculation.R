@@ -426,3 +426,115 @@ ggsave("auroc_score.png", plot = p, width = 4, height = 8, dpi = 1000)
 
 ######################################################################################
 ######################################################################################
+
+## 1. For NRI Figure 5j ------------------------------------------>>
+
+## FOR TRAINING SET RESULTS:-------------------------------------------------##
+# Read the files having scores:
+clin_vs_all_train <- as.data.frame(read_csv("NRI_train/NRI_CLIN_vs_allfeature_train.csv"))
+# Omit-NA values
+clin_vs_all_train <- na.omit(clin_vs_all_train)
+
+## Subset for different methods
+# Random forest
+random_forest_train <- clin_vs_all_train[clin_vs_all_train$model=="random_forest",]
+
+# Elastic net
+elastic_net_train <- clin_vs_all_train[clin_vs_all_train$model=="ELASTIC_NET",]
+
+# Lasso
+lasso_train <- clin_vs_all_train[clin_vs_all_train$model=="LASSO",]
+
+# Combine all training df
+df_train <- rbind(random_forest_train, elastic_net_train, lasso_train)
+df_train$Set <- "Training"
+
+## FOR TESTING SET RESULTS:-------------------------------------------------##
+# Read the files having scores:
+clin_vs_all_test <- as.data.frame(read_csv("NRI_test/NRI_CLIN_vs_all_features.csv"))
+# Omit-NA values
+clin_vs_all_test <- na.omit(clin_vs_all_test)
+
+## Subset for different methods
+# Random forest
+random_forest_test <- clin_vs_all_test[clin_vs_all_test$model=="random_forest",]
+
+# Elastic net
+elastic_net_test <- clin_vs_all_test[clin_vs_all_test$model=="ELASTIC_NET",]
+
+# Lasso
+lasso_test <- clin_vs_all_test[clin_vs_all_test$model=="LASSO",]
+
+# Combine testing df
+df_test <- rbind(random_forest_test, elastic_net_test, lasso_test)
+df_test$Set <- "Testing"
+
+
+## Combine both training and testing dataframes
+df_combined <- rbind(df_train, df_test)
+
+# Group & calculate the standard deviation
+nri_summary <- df_combined %>%
+  group_by(Set, model, percentile) %>%
+  summarise(
+    value = mean(nri_total, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Format labels
+nri_summary$model <- gsub("ELASTIC_NET","Elastic net",nri_summary$model)
+nri_summary$model <- gsub("LASSO","Lasso",nri_summary$model)
+nri_summary$model <- gsub("random_forest","Random forest",nri_summary$model)
+
+# Add 'th' to each percentile value
+nri_summary$percentile <- paste0(nri_summary$percentile, "th")
+
+# Set the order of percentiles for plotting
+nri_summary$percentile <- factor(nri_summary$percentile, levels = c("25th", "50th", "75th"))
+
+# Round to two digits
+nri_summary$value <- round(nri_summary$value, 2)
+
+# Plot
+p <- ggplot(nri_summary, aes(
+  x = percentile,
+  y = value,
+  group = interaction(model, Set),
+  color = model,
+  linetype = Set
+)) +
+  geom_point(size = 3) +
+  geom_line(size = 1.2) +  
+  labs(
+    y = "NRI",
+    x = "Percentile",
+    color = "Classifier"
+  ) +
+  scale_y_continuous(
+    limits = c(0.3, 0.7),
+    breaks = seq(0.3, 0.7, by = 0.02),  # More frequent breaks
+    expand = c(0, 0)
+  ) +
+  scale_color_manual(values = c(
+    "Elastic net" = "#1f77b4",
+    "Lasso" = "#ff7f0e",
+    "Random forest" = "#2ca02c"
+  )) +
+  theme_bw() +
+  # theme_grey(base_size = 14) +
+  theme(
+    axis.text.x = element_text(colour = "black", face = "bold", size = 12),
+    axis.text.y = element_text(colour = "black", size = 14),
+    plot.margin = margin(t = 0.2, r = 0.005, b = 0.05, l = 0.55, unit = "cm"),
+    axis.title = element_text(colour = "black", face = "bold", size = 16),
+    text = element_text(colour = "black"),
+    legend.text = element_text(size = 12, color = "black"),
+    legend.title = element_text(size = 14, face = "bold"),
+    panel.border = element_rect(color = "black", fill = NA, size = 0.5),
+    legend.position = "bottom",
+    legend.direction = "horizontal",
+  )
+p
+ggsave("C:/Users/Simran/Desktop/Promoter activity project/PAPER/NPJ_Revision1/NRI_FINAL_updated.png", plot = p, width = 10, height = 6, dpi = 1000)
+###################################################################################################################################################
+###################################################################################################################################################
