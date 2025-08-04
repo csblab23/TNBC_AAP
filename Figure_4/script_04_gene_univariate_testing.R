@@ -186,7 +186,7 @@ gene_res <- data.frame(Gene_names = colnames(mm_finaldf)[c(9:dim(mm_finaldf)[2])
 write.csv(gene_res, 'testing_sub/all_gene.csv')
 
 # Fetch nonsignificant genes and save result
-gene_nonsig_result <- filter(gene_res, PValue > 0.05)
+gene_nonsig_result <- filter(gene_res, PValue > 0.1)
 dim(gene_nonsig_result) 
 write.csv(gene_nonsig_result, 'gene_nonsig_pvalue.csv')
 
