@@ -3,7 +3,7 @@
 This repository contains scripts and data used to construct predictive models for relapse risk assessment in patients.
 
 ## Key Components
-**1.Panel05/FS/**: Directory containing all model construction scripts organized by individual feature sets (FS = Feature Set). <br>
+**1.FS/**: Directory containing all model construction scripts organized by individual feature sets (FS = Feature Set). <br>
 **2.Input.csv**: Unified input dataset used across all models for training and evaluation. <br>
 **3.KM_plots_for_risk_models_training_Set.R**: Code for generating the KM plots on training set as presented in figure 5a-c.<br>
 **4.KM_plots_for_risk_models_validation_Set.R**: Code for generating the KM plots on validation set as presented in figure 5d-f.<br>
