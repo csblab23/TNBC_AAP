@@ -1,4 +1,4 @@
-## Code to make line plots shown in Supplementary figure S5 for comparing the calculated metrics across all the generated models ##
+## Code to make line plots shown in Supplementary figure S6 for comparing the calculated metrics across all the generated models ##
 
 # Load required libraries
 library(ggplot2)
@@ -148,6 +148,5 @@ p <- ggplot(df,
   )
 p
 ggsave("auroc_FINAL_plot.png", plot = p, width = 9, height = 4, dpi = 1000)
-
 ######################################################################################
 ######################################################################################
