@@ -1,4 +1,4 @@
-## This code is to make the box plots presented in Supplementary S6a for the Feature set C,A,F comparison ##
+## This code is to make the box plots presented in Supplementary S7a for the Feature set C,A,F comparison ##
 
 # Load required libraries
 library(dplyr)
