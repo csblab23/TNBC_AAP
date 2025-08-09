@@ -1,4 +1,4 @@
-#### NOTE: This script contains the code used for calculating Mean Variance Inflation Factor (VIF) per feature & generate the Supplementary figure S4a ####
+#### NOTE: This script contains the code used for calculating Mean Variance Inflation Factor (VIF) per feature & generate the Supplementary figure S5 ####
 
 # Load required libraries
 library(dplyr)
