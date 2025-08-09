@@ -249,7 +249,7 @@ exprMat <- sva::ComBat(vMat, batch=subset_metadata$batch)
 ####-----
 
 # Read the result2 file:
-result2 <- readRDS("result2_updated_subype_fuscc.rds")
+result2 <- readRDS("result2_updated_subype.rds")
 
 # Load Absolute promoter activity
 abs_pa <- as.data.frame(result2@assays@data@listData$absolutePromoterActivity)  
