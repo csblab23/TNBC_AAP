@@ -92,7 +92,7 @@ subset_meta <- metadata[,c('Run', 'batch','Tumor_Normal1')]
 merged_meta <- subset_meta
 
 # Read the feature-counts matrix 
-count <- as.data.frame(read_csv("Featurecounts_combined_fuscc.csv"))
+count <- as.data.frame(read_csv("Featurecounts_combined.csv"))
 count=count[,-1] # remove extra s.no. column
 count <- tibble::column_to_rownames(count, var = "Geneid")
 
@@ -353,7 +353,7 @@ rownames(metadata) <- metadata$Run  # making the sample names as rownames
 subset_meta <- metadata[,c('Project_ID','Run', 'batch','Tumor_Normal1')]   # just keep the required columns
 
 # Read the result2 file for all 448 samples obtained through proActiv
-result2 <- readRDS("./tum_nor_alternate_prom_result/result2_tum_vs_adjnormal.rds")
+result2 <- readRDS("result2_tum_vs_adjnormal.rds")
 result2_promoter=rowData(result2)
 result2_promoter=as.data.frame(result2_promoter)
 
@@ -482,7 +482,7 @@ tcga_metadata <- as.data.frame(tcga_metadata)
 keep <- c("YES","Normal")
 tcga_metadata <- tcga_metadata[tcga_metadata$TNBC %in% keep,]
 
-## Read HDAC9 pr1079 transcripts FPKM (log2 fpkm + 0.001)
+## Read HDAC9 pr1079 transcripts FPKM
 t1 <- read_tsv("ENST00000456174.6_xenaDownload.tsv")
 t1 <- as.data.frame(t1)
 t1_sel <- t1[t1$sample%in%tcga_metadata$trimmed_sample_submitter_id,]
