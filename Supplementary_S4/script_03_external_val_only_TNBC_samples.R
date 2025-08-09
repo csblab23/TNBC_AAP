@@ -1,4 +1,4 @@
-## Code to make Supplementary S3d,e,f,g ## 
+## Code to make Supplementary S4d,e,f,g ## 
 # This includes PROGNOSTIC RESULTS VALIDATION in GSE240671 cohort --->> only TNBC samples taken and proActiv ran using condition = NULL
 
 # Load required libraries
@@ -206,6 +206,5 @@ p <- p + stat_compare_means(aes(group = risk_group),
                                                                  fontface = "bold") 
 p
 ggsave("tnbc_geneboxplot.png", p, width = 5.5, height = 5, dpi = 1000)
-
 ###################################################################################
 ###################################################################################
