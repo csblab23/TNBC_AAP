@@ -1,4 +1,4 @@
-## Code for generating Supplementary figure S4c -->> construct risk groups and to check the survival of each risk group in Validation dataset ##
+## Code for generating Supplementary figure S7c -->> construct risk groups and to check the survival of each risk group in Validation set ##
 
 # Load required packages
 library(survival)
