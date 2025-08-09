@@ -16,7 +16,7 @@ library(sva)
 # Read all the input files
 result2 <- readRDS('result2_v2_updated.rds')
 metadata <- as.data.frame(read_csv("meta_with_batchinfo.csv"))
-count <- as.data.frame(read_csv("Featurecounts_combined_fuscc.csv"))
+count <- as.data.frame(read_csv("Featurecounts_combined.csv"))
 
 # Data preprocessing
 metadata <- metadata[, -1]  # Remove extra column
