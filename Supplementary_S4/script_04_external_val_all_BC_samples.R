@@ -1,4 +1,4 @@
-## Code to make Supplementary S3 h,i,j,k ## 
+## Code to make Supplementary S4 h,i,j,k ## 
 # This includes PROGNOSTIC RESULTS VALIDATION in GSE240671 cohort --->> all breast tumor samples taken here
 
 # Load required libraries
@@ -216,6 +216,5 @@ p <- p + stat_compare_means(aes(group = risk_group),
                                                                  fontface = "bold") 
 p
 ggsave("tumor_geneboxplot.png", p, width = 5.6, height = 5, dpi = 1000)
-
 ##############################################################################
 ##############################################################################
