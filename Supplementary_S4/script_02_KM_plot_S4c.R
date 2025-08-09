@@ -1,4 +1,4 @@
-## Code to make the KM PLOT of Supplementary S3c ##
+## Code to make the KM PLOT of Supplementary S4c ##
 
 # Load required packages
 library(survival)
