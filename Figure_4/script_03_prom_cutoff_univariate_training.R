@@ -16,7 +16,6 @@ library(sva)
 # Read input files
 result2 <- readRDS('result2_v2_updated.rds')
 metadata <- as.data.frame(read_csv("meta_with_batchinfo.csv"))
-count <- as.data.frame(read_csv("Featurecounts_combined.csv"))
 
 # Data preprocessing
 metadata <- metadata[, -1]  # Remove extra column
@@ -96,7 +95,7 @@ ensg_freq_2 <- table(filtered_df$geneId)
 ensg_final <- names(ensg_freq_2[ensg_freq_2 >= 2])
 filtered_df <- filtered_df[filtered_df$geneId %in% ensg_final,]
 
-# Now we will pre-process feature count matrix here only, why here?? --> because we have to take genes that are present in the filtered step till here
+# Pre-process feature count matrix
 count <- read_csv("Featurecounts_combined.csv") %>%
   as.data.frame() %>%
   column_to_rownames("Geneid") %>% 
