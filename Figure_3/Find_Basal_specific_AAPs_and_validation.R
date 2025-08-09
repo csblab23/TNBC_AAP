@@ -44,7 +44,7 @@ subset_metadata <- metadata[,c('Run','batch','Intrinsic_Subtype')] # just keep t
 #####
 
 # Read the feature-counts matrix 
-count <- as.data.frame(read_csv("Featurecounts_combined_fuscc.csv"))
+count <- as.data.frame(read_csv("Featurecounts_combined.csv"))
 count=count[,-1] # remove extra s.no. column
 count <- tibble::column_to_rownames(count, var = "Geneid")
 
