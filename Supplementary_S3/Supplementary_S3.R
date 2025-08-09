@@ -1,4 +1,4 @@
-############## This script includes all the codes used for SUPPLEMENTARY S2 ################
+############## This script includes all the codes used for SUPPLEMENTARY S3 ################
 
 # Load required libraries
 library(dplyr)
@@ -7,7 +7,7 @@ library(FactoMineR)
 library(factoextra)
 
 
-## Code For Supplementary figure S2a & S2c:---------------------->>
+## Code For Supplementary figure S3a & S3c:---------------------->>
 
 set.seed(456)
 
@@ -124,7 +124,7 @@ for (aap_name in names(aap_lists)) {
 #############################################################################
 #############################################################################
 
-## Code for Supplementary figure S2b & S2d:------------------->>
+## Code for Supplementary figure S3b & S3d:------------------->>
 
 # PCA plots for promoters
 
@@ -213,7 +213,7 @@ for (aap_name in names(aap_sets)) {
 #############################################################################
 #############################################################################
 
-## Code For Supplementary figure S2e & S2f:---------------------->>
+## Code For Supplementary figure S3e & S3f:---------------------->>
 
 # Load the FUSCC metafile with TNBC subtype information
 metadata <- as.data.frame(read_csv("fuscc_merged_meta.csv"))
@@ -342,7 +342,7 @@ ggsave("./fuscc/lsp1_gene.png", g, width = 5.4, height = 5.6, dpi = 1000)
 ##########################################################################
 ##########################################################################
 
-## Code For Supplementary figure S2g & S2h:---------------------->>
+## Code For Supplementary figure S3g & S3h:---------------------->>
 
 # Box plots for validation dataset/external dataset 1
 # Load the metafile having TNBC subtype information  
