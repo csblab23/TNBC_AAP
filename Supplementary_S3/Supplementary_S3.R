@@ -27,7 +27,7 @@ subset_meta <- metadata[,c('Run', 'batch','Tumor_Normal1','Intrinsic_Subtype')] 
 subset_meta <- subset_meta[subset_meta$Tumor_Normal1=='Tumor',]
 
 # Read the feature-counts matrix 
-count <- as.data.frame(read_csv("Featurecounts_combined_fuscc.csv"))
+count <- as.data.frame(read_csv("Featurecounts_combined.csv"))
 count=count[,-1] # remove extra s.no. column
 count <- tibble::column_to_rownames(count, var = "Geneid")
 
@@ -221,7 +221,7 @@ metadata=tibble::column_to_rownames(metadata,var = '...1')
 subset_metadata <- metadata
 
 # Read the feature-counts matrix 
-count <- as.data.frame(read_csv("Featurecounts_combined_fuscc.csv"))
+count <- as.data.frame(read_csv("Featurecounts_combined.csv"))
 count=count[,-1] # remove extra s.no. column
 count <- tibble::column_to_rownames(count, var = "Geneid")
 
