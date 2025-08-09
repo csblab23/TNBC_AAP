@@ -1,8 +1,9 @@
-## This script includes the code used for generating C-index; IBS score and AUROC plots shown in Figure 5g,h,i ##
+## This script includes the code used for generating C-index; IBS score; AUROC and NRI plots shown in Figure 5g,h,i,j ##
 
 # Load required libraries
 library(dplyr)
 library(tidyverse)
+library(readxl)
 
 ## 1. For C-index Figure 5g ------------------------------------------>>
 
@@ -424,5 +425,48 @@ p = ggplot(data_long, aes(x = Features, y = Mean, color = Metric, group = Metric
 p
 ggsave("auroc_score.png", plot = p, width = 4, height = 8, dpi = 1000)
 
+######################################################################################
+######################################################################################
+
+## 4. For NRI Figure 5j------------------------------------->>
+
+# Read the mean NRI values for training and validation set for all classifiers
+nri_df <- read_xlsx("NRI_Total_clin_vs_all.xlsx")
+nri_df <- as.data.frame(nri_df)
+
+# Define the order
+nri_df$Method <- factor(nri_df$Method,levels = c("Elastic net", "Lasso","Random forest"))
+nri_df$Set <- factor(nri_df$Set,levels = c("Training","Testing"))
+
+# Round to two digits
+nri_df$NRI <- round(nri_df$NRI, 2)
+
+# Create the barplot
+p <- ggplot(nri_df, aes(x = Set, y = NRI, fill = Set)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.4), width = 0.8) +
+  labs(y = "NRI", x = "Classifier") +
+  facet_grid(Method ~ ., scales = "free_y", switch = "y") +
+  theme_bw() +
+  coord_flip() +  # horizontal bars
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(colour = "black", size = 15),
+    axis.title.y = element_text(colour = "black", face = "bold", size = 16,angle = 90),
+    axis.title.x = element_text(colour = "black", face = "bold", size = 16),
+    text = element_text(colour = "black"),
+    strip.text = element_text(size = 14, face = "bold"),
+    plot.margin = margin(t = 0.1, r = 0.5, b = 0.1, l = 0.1, unit = "cm"),
+    legend.text = element_text(size = 13, color = "black"),
+    legend.title = element_text(size = 14, face = "bold"),
+    panel.border = element_rect(color = "black", fill = NA, size = 0.5),
+    legend.position = "bottom",
+    legend.direction = "horizontal",
+  ) +
+  scale_fill_manual(values = c("Training" = "#298c8c", "Testing" = "#ea801c"),
+                    labels = c("Training" = "Training", "Testing" = "Validation"))
+
+p
+ggsave("NRI_FINAL_barplot.png", plot = p, width = 3.1, height = 6, dpi = 1000)
 ######################################################################################
 ######################################################################################
