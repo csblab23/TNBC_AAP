@@ -1,4 +1,4 @@
-## Code for generating Supplementary figure S7b -->> construct risk groups and to check the survival of each risk group in Training dataset ##
+## Code for generating Supplementary figure S7b -->> construct risk groups and to check the survival of each risk group in Training set ##
 
 # Load required packages
 library(survival)
