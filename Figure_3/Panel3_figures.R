@@ -143,7 +143,7 @@ metadata <- metadata[metadata$Tumor_Normal1=='Tumor',]
 subset_metadata <- metadata[,c('Run','batch','Intrinsic_Subtype')] # just keep the required columns
 
 # Read the feature-counts matrix 
-count <- as.data.frame(read_csv("Featurecounts_combined_fuscc.csv"))
+count <- as.data.frame(read_csv("Featurecounts_combined.csv"))
 count = count[,-1] # remove extra s.no. column
 count <- tibble::column_to_rownames(count, var = "Geneid")
 
@@ -473,7 +473,7 @@ metadata=tibble::column_to_rownames(metadata,var = '...1')
 subset_metadata <- metadata
 
 # Read the feature-counts matrix
-count <- as.data.frame(read_csv("Featurecounts_combined_fuscc.csv"))
+count <- as.data.frame(read_csv("Featurecounts_combined.csv"))
 count=count[,-1] # remove extra s.no. column
 count <- tibble::column_to_rownames(count, var = "Geneid")
 
@@ -501,7 +501,7 @@ exprMat <- sva::ComBat(vMat, batch=subset_metadata$batch)
 ####----
 
 # Read the result2 file:
-result2 <- readRDS("result2_updated_subype_fuscc.rds")
+result2 <- readRDS("result2_updated_subype.rds")
 
 # Box plots:--------->>
 # Load Absolute promoter activity:--------------------->>
@@ -716,6 +716,5 @@ g <- g + stat_compare_means(aes(group = Condition),
   scale_y_continuous(limits = c(2.2, 8),expand = c(0,0))
 g
 ggsave("lsp1_gene.png", g, width = 5.4, height = 5.6, dpi = 1000)
-
 #############################################################################
 #############################################################################
