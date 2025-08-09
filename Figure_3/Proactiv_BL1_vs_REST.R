@@ -76,7 +76,7 @@ result_promoter = as.data.frame(result_promoter)
 result2 <- result[complete.cases(assays(result)$promoterCounts),]
 result2_promoter = rowData(result2)
 result2_promoter = as.data.frame(result2_promoter)
-saveRDS(result2,"result2_updated_subype_fuscc.rds")
+saveRDS(result2,"result2_updated_subype.rds")
 
 ############################################################################
 
