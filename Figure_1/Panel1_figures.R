@@ -141,7 +141,7 @@ ggsave("fig1B_stackedbar.png", g, width = 9, height = 8, dpi = 1000)
 ## For Figure 1c:---->>
 
 # Read the result2 file for FUSCC dataset:
-result2 <- readRDS("./tum_nor_alternate_prom_result/result2_tum_vs_adjnormal.rds")
+result2 <- readRDS("result2_tum_vs_adjnormal.rds")
 result2_promoter = rowData(result2)
 result2_promoter = as.data.frame(result2_promoter)
 result2_prom <- result2_promoter[result2_promoter$internalPromoter == 'FALSE', ]
