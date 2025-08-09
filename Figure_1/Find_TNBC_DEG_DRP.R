@@ -20,7 +20,7 @@ rownames(metadata) <- metadata$Run  # making the sample names as rownames
 subset_meta <- metadata[,c('Run', 'batch','Tumor_Normal1')]   # just keep the required columns
 
 # Read the feature-counts matrix 
-count <- as.data.frame(read_csv("Featurecounts_combined_fuscc.csv"))
+count <- as.data.frame(read_csv("Featurecounts_combined.csv"))
 count=count[,-1] # remove extra s.no. column
 count <- tibble::column_to_rownames(count, var = "Geneid")
 
