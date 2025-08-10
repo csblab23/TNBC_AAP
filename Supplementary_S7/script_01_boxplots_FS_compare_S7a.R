@@ -19,9 +19,9 @@ load_model_data <- function(path, model_name) {
 }
 
 # Load each model's data
-fsc <- load_model_data("5_feature_model/clin_and_prom.csv", "FS_C")
-fsa <- load_model_data("4_feature_model/clin_and_prom.csv", "FS_A")
-fsf <- load_model_data("6_feature_updated/clin_and_prom.csv", "FS_F")
+fsc <- load_model_data("FS_C/clinical_plus_promoter.csv", "FS_C")
+fsa <- load_model_data("FS_A/clinical_plus_promoter.csv", "FS_A")
+fsf <- load_model_data("FS_F/clinical_plus_promoter.csv", "FS_F")
 
 # Combine all into one dataframe
 combined <- bind_rows(fsc, fsa, fsf)
@@ -85,9 +85,9 @@ load_model_data <- function(path, model_name) {
 }
 
 # Load each model's data
-fsc <- load_model_data("5_feature_model/clin_and_prom.csv", "FS_C")
-fsa <- load_model_data("4_feature_model/clin_and_prom.csv", "FS_A")
-fsf <- load_model_data("6_feature_updated/clin_and_prom.csv", "FS_F")
+fsc <- load_model_data("FS_C/clinical_plus_promoter.csv", "FS_C")
+fsa <- load_model_data("FS_A/clinical_plus_promoter.csv", "FS_A")
+fsf <- load_model_data("FS_F/clinical_plus_promoter.csv", "FS_F")
 
 # Combine all into one dataframe
 combined <- bind_rows(fsc, fsa, fsf)
@@ -151,9 +151,9 @@ load_model_data <- function(path, model_name) {
 }
 
 # Load each model's data
-fsc <- load_model_data("5_feature_model/clin_and_prom.csv", "FS_C")
-fsa <- load_model_data("4_feature_model/clin_and_prom.csv", "FS_A")
-fsf <- load_model_data("6_feature_updated/clin_and_prom.csv", "FS_F")
+fsc <- load_model_data("FS_C/clinical_plus_promoter.csv", "FS_C")
+fsa <- load_model_data("FS_A/clinical_plus_promoter.csv", "FS_A")
+fsf <- load_model_data("FS_F/clinical_plus_promoter.csv", "FS_F")
 
 # Combine all into one dataframe
 combined <- bind_rows(fsc, fsa, fsf)
