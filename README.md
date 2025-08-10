@@ -10,3 +10,5 @@ This repository contains the codes and relevant data files used to generate the 
 5. *Figure 5/* – Code and data for reproducing the results in Figure panel 5 related to the construction of multiple risk assessment models using different feature sets.
 
 Each directory contains a dedicated README file that provides information about the scripts and data files included within it.
+
+The larger data files have been deposited on Zenodo and can be accessed through https://doi.org/10.5281/zenodo.16538303.
