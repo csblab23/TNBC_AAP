@@ -1,4 +1,4 @@
-## Code to make the forest plot given in Figure 4g ##
+## Code to make the forest plot given in Figure S4d ##
 
 # Load required packages
 library(survminer)
@@ -153,3 +153,4 @@ ggsave("forestplot.png", p, width = 13, height = 12, dpi = 1200)
 
 ############################################################################
 ############################################################################
+
