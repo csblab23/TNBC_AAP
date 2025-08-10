@@ -1,4 +1,4 @@
-## Code to make line plots shown in Supplementary figure S6 for comparing the calculated metrics across all the generated models ##
+## Code to make line plots shown in Supplementary figure S7 for comparing the calculated metrics across all the generated models ##
 
 # Load required libraries
 library(ggplot2)
