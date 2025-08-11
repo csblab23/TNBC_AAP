@@ -1,4 +1,4 @@
-# **Promoter Landscape in FUSCC cohort**
+# **Uncovering Promoter Landscape**
 This repository contains scripts and data used to categorize genes into single-promoter and multi-promoter groups. Further, we checked the distribution of major and minor promoters with respect to the position in the gene. 
 
 **Key Components**
