@@ -9,5 +9,5 @@ This repository contains scripts and data used to identify BL1-specific and Basa
 3. *Proactiv_BASAL_vs_NON_BASAL.R*: Code to run proactiv pipeline on Basal vs the Non-Basal samples in FUSCC and external dataset 1.
 4. *Find_BL1_specific_AAPs_and_validation.R*: Code to identify BL1-specific DEGs and DRPs in FUSCC cohort and their validation in the external dataset 1.
 5. *Find_BASAL_specific_AAPs_and_validation.R*: Code to identify Basal subtype-specific DEGs and DRPs in FUSCC cohort and their validation in the external dataset 1.
-6. *Panel3_figures.R*: Code to replicate all the figures presented in the Figure panel 03 of our paper.
+6. *Panel3_figures.R*: Code to replicate all the figures presented in the Figure panel 3 of our paper.
 
