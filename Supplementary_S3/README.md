@@ -1,4 +1,4 @@
-# **Uncovering of TNBC subtype-specific Active Alternative Promoters (AAP)**
+# **Uncovering of subtype-specific AAPs**
 
 This repository contains script used to generate Figure S3 for subtype-specific AAPs identified in the analysis.
 
