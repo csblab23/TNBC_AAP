@@ -8,8 +8,8 @@ This repository contains the codes and relevant data files used to generate the 
 3. *Figure 3/* – Code and data for reproducing the results in Figure panel 3 related to identification of TNBC subtype-specific AAPs.
 4. *Figure 4/* – Code and data for reproducing the results in Figure panel 4 related to identification of prognostically significant AAPs.
 5. *Figure 5/* – Code and data for reproducing the results in Figure panel 5 related to the multivariate survival analysis.
-6. *Figure 6/* – Code and data for reproducing the results in Figure panel 5 related to the construction of multiple risk assessment models using different feature sets.
-7. *Supplementary_S1 to Supplementary_S7/* – Each of these folders comprise of the respective codes and data for reproducing the corresponding supplementary figure panels of the paper.
+6. *Figure 6/* – Code and data for reproducing the results in Figure panel 6 related to the construction of multiple risk assessment models using different feature sets.
+7. *Supplementary_S1 to Supplementary_S8/* – Each of these folders comprise of the respective codes and data for reproducing the corresponding supplementary figure panels of the paper.
    
 Each directory contains a dedicated README file that provides information about the scripts and data files included within it.
 
